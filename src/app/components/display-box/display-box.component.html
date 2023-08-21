@@ -1,0 +1,18 @@
+<div class="container">
+<div class="row" [ngStyle]="!isEven ? { 'flex-direction': 'row-reverse' } : {}">
+    <div class="text">
+      <div class="subtitle">{{slogan?.title}}</div>
+      <div class="description">
+        {{slogan?.description}}
+      </div>
+    </div>
+    <div class="picture">
+      <img alt="" src="{{slogan?.url}}" />
+      <div class="videobox" *ngIf="!slogan?.videoUrl === null">
+        <video autoplay muted playsinline loop>
+          <source src="{{slogan?.videoUrl}}" />
+        </video>
+      </div>
+    </div>
+  </div>
+</div>

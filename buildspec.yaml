@@ -1,0 +1,34 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+    commands:
+      - echo Installing Angular CLI
+      - npm install -g @angular/cli
+
+  pre_build:
+    commands:
+      - echo Installing project dependencies
+      - npm install
+
+  build:
+    commands:
+      - echo Building the Angular project
+      - ng build --prod
+
+  post_build:
+    commands:
+      - echo Deploying to S3
+      - aws s3 sync dist/your-app-name s3://your-bucket-name/
+
+cache:
+  paths:
+    - "node_modules/**/*"
+
+artifact:
+  files:
+    - "**/*"
+  base-directory: "dist*"
+  discard-paths: yes

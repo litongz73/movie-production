@@ -1,0 +1,49 @@
+<div class="container">
+  <p>STEP 2 OF 3</p>
+  <h2 class="title"> Create a Useranem && Add your Tmdb Apt_Key</h2>
+  <p> Just a few more steps and you're done!</p>
+  <p> We hate paperwork, too. </p>
+
+  <form [formGroup]="secondForm" (ngSubmit)="onSubmit()">
+
+
+    <!-- username input -->
+    <div class="row g-2">
+      <div class=col-lg->
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+            formControlName="username"
+            [ngClass]="{'is-invalid': username.errors?.['required'] && !username.valid && (username.dirty || username.touched)}">
+          <label for="floatingInput">Create your username*</label>
+        </div>
+      </div>
+    </div>
+    <div class="row g-2">
+      <div *ngIf="!username.valid && (username.dirty || username.touched)">
+        <div style="text-indent: 10px; color: red; font-size: small;" *ngIf="username.errors?.['required']"> You will
+          need a username to continue!
+        </div>
+      </div>
+    </div>
+
+    <!-- key input -->
+    <div class="row g-2">
+      <div class=col-lg->
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="123456" formControlName="key">
+          <label for="floatingInput">Add your Tmdb Api_key *</label>
+        </div>
+      </div>
+    </div>
+    <div class="row g-2">
+      <div *ngIf="!key.valid && (key.dirty || key.touched)">
+        <div style="text-indent: 10px; color: red; font-size: small;" *ngIf="key.errors?.['required']"> Tmdb api key is required!
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 10px;">
+      <button class="btn btn-danger" type="submit" [disabled]="secondForm.invalid"> Next</button>
+    </div>
+
+  </form>
+</div>

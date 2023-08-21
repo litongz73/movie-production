@@ -1,0 +1,64 @@
+* {
+  user-select: none;
+  cursor: default;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  overflow: hidden;
+  padding-top: 90px;
+}
+
+
+.planBox {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  opacity: 0.5;
+
+}
+
+.planBox.selected {
+  opacity: 1;
+}
+
+.triangle.selected {
+  border-top: 20px solid red;
+}
+
+td {
+  text-align: center;
+
+}
+
+td.selected {
+  color: red;
+}
+
+.checkmark {
+  font-weight: bolder;
+}
+
+.triangle {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid transparent;
+  margin: 0 auto;
+}
+
+
+button {
+  font-size: larger;
+  width: 300px;
+  height: 40px;
+
+}

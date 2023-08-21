@@ -1,0 +1,28 @@
+.Container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 5% auto 5%;
+  align-items: stretch;
+  row-gap: 20px;
+  padding-top: 90px;
+
+
+}
+
+.background{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(84, 132, 179);
+}
+
+
+.loading-bar {
+  flex: 1;
+  /* Allow the flex items to grow and occupy the available vertical space */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+

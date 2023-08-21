@@ -1,0 +1,11 @@
+<div class="background">
+  <!-- <div class="Container"> -->
+  <div class="Container" infiniteScroll [infiniteScrollDistance]="0.5" [infiniteScrollThrottle]="1000"
+        (scrolled)="onScroll()">
+    <app-movie-item *ngFor="let current of movies" [InputMovie]="current"></app-movie-item>
+
+  </div>
+  <div class="loading-bar">
+    <p >Loading...</p>
+  </div>
+</div>

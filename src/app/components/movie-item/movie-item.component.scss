@@ -1,0 +1,66 @@
+.Container {
+  width: 300px;
+  height: 750px;
+  background-color: white;
+
+  padding-bottom: 40px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.Container.clicked {
+  background-color: lightgray;
+  box-shadow: none;
+}
+
+img {
+  width: 300px;
+  height: 100%;
+}
+
+.titleLine {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin: 0 5px 0 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.titleLine>span {
+  font-weight: bolder;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bolder;
+  font-style: italic;
+  color: black;
+}
+
+.secondLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  margin: 0 5px 0 5px;
+}
+
+.secondLine>div {
+  font-weight: bolder;
+}
+
+.overview {
+  margin: 0 5px 0 5px;
+}
+
+
+
+* {
+  font-family: Netflix Sans,
+    Helvetica Neue,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    sans-serif;
+}

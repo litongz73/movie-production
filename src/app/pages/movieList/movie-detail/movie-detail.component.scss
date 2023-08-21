@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.container {
+  position: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: 100% auto;
+  background-position: center;
+  max-width: 2160px;
+  padding-top: 90px;
+  display: flex;
+  flex-direction: row;
+}
+
+.container>div {
+  height: 100%;
+  flex-basis: 50%;
+  // background-color: white;
+}
+
+.posters {
+  display: flex;
+  flex-direction: row;
+}
+
+.credits {
+  display: flex;
+  flex: row;
+}
+
+.posters>img {
+  width: 160px;
+  height: 90px;
+  border-radius: 5px;
+}
+
+.posters {
+  gap: 10px;
+}
+
+.credit-box>img {
+  width: 90px;
+  height: 160px;
+  border-radius: 5px;
+}
+
+.credit-box {
+  margin-right: 10px;
+}
+
+.credits {
+  margin-bottom: 30px;
+}
+
+.left-container{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-left:40px;
+  margin-right: 20px;
+}
+
+.right-container {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+}
+
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.informLine {
+  margin-bottom: 20px;
+}
+
+
+.hpContainer > *{
+  color: grey;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 120px;
+}
+
+app-video-modal{
+
+  /* Your styles for app-modal */
+  /* For example: */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}

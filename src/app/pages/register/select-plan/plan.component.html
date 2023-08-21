@@ -1,0 +1,41 @@
+<div class="container">
+  <p>STEP 2 OF 3</p>
+  <h2 class="title"> Choose the paln that's right for you</h2>
+  <p> Watch all you want, ad-free</p>
+  <p> Recommandations just for you</p>
+  <p> Change or cancel your paln anytime.</p>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <td *ngFor="let plan of plans" scope="col">
+          <div class="planBox" [class.selected]="selectedPlan === plan" (click)="onSelectPlan(plan)">{{ plan.name }}</div>
+          <div class="triangle" [class.selected]="selectedPlan === plan"></div>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Monthly price</th>
+        <td *ngFor="let plan of plans" (click)="onSelectPlan(plan)" [class.selected]="selectedPlan === plan">{{ plan.price }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Video Quality</th>
+        <td *ngFor="let plan of plans" (click)="onSelectPlan(plan)" [class.selected]="selectedPlan === plan">{{ plan.videoQuality }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Resolution</th>
+        <td *ngFor="let plan of plans" (click)="onSelectPlan(plan)" [class.selected]="selectedPlan === plan"> {{ plan.resolution }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Watch on your TV, computer, mobile phone and tablet</th>
+        <td class = "checkmark" *ngFor="let plan of plans" (click)="onSelectPlan(plan)" [class.selected]="selectedPlan === plan"><span>&#x2713;</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="display: flex; justify-content: center; margin-top: 30px;">
+    <button class="btn btn-danger" type="submit" (click)="OnFinishRegister()"> Next</button>
+  </div>
+</div>

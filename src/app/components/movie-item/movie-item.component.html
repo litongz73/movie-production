@@ -1,0 +1,17 @@
+<div Class="Container" (click) ="toDetail(InputMovie?.id)">
+  <div>
+    <img src="{{ InputMovie?.poster }}" alt="title" />
+  </div>
+
+  <div class="titleLine">
+    <div class="title">{{ InputMovie?.title }}</div>
+    <span>{{ InputMovie?.rating }}/10</span>
+  </div>
+
+  <div class="secondLine">
+    <div>Language: {{ InputMovie?.language }}</div>
+    <div>Year: {{ InputMovie?.year }}</div>
+  </div>
+
+  <div class="overview">{{ InputMovie?.overview | slice: 0:120 }}...</div>
+</div>

@@ -1,0 +1,75 @@
+<div class="background"></div>
+<div class="container">
+  <div class="loginBox">
+    <p class="text">Sign In</p>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <!-- Email input -->
+      <div class="row g-2">
+        <div class=col-lg->
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+              formControlName="email"
+              [ngClass]="{'is-invalid': email.errors?.['required'] && !email.valid && (email.dirty || email.touched)}">
+            <label for="floatingInput">Enter your Email Address</label>
+          </div>
+        </div>
+      </div>
+      <div class="row g-2">
+        <div *ngIf="!email.valid && (email.dirty || email.touched)">
+          <div style="text-indent: 10px; color: red; font-size: small;" *ngIf="email.errors?.['required']"> Email is
+            required!
+          </div>
+          <div style="text-indent: 10px; color: red; font-size: small;" *ngIf="email.errors?.['emilexist']"> Please try
+            to
+            use
+            another email!</div>
+        </div>
+
+      </div>
+
+      <!-- Password input -->
+      <div class="row g-2">
+        <div class=col-lg->
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingInput" placeholder="123456"
+              formControlName="password">
+            <label for="floatingInput">Enter your password</label>
+          </div>
+        </div>
+      </div>
+      <div class="row g-2">
+        <div *ngIf="!password.valid && (password.dirty || password.touched)">
+          <div style="text-indent: 10px; color: red; font-size: small;" *ngIf="password.errors?.['required']"> password
+            is
+            required!
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 column grid layout for inline styling -->
+      <div class="row mb-4">
+        <div class="col d-flex justify-content-center">
+          <!-- Checkbox -->
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+            <label class="form-check-label" for="form2Example31"> Remember me </label>
+          </div>
+        </div>
+
+        <div class="col">
+          <!-- Simple link -->
+          <a href="#!">Forgot password?</a>
+        </div>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="submitBut btn btn-primary btn-block mb-4">Sign in</button>
+
+      <!-- Register buttons -->
+      <div class="text-center">
+        <p>New to Netflix? <a href="#!" routerLink="/main" routerLinkActive="active" style="font: 16px bold white">Sign
+            up now</a></p>
+      </div>
+    </form>
+  </div>
+</div>

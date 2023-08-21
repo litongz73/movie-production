@@ -1,0 +1,108 @@
+* {
+  color: #737373;
+}
+
+.container {
+  padding-top: 50px;
+
+
+}
+
+.loginBox {
+padding-top: 90px;
+  width: 450px;
+  background-color: rgba(0, 0, 0, .75);
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 60px 68px 40px;
+  color: white;
+  min-width: 380px;
+  min-height: 660px;
+}
+
+.text {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+
+.background {
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/efb4855d-e702-43e5-9997-bba0154152e0/41237afb-6f3a-48e2-8b0d-fd3171752a38/US-en-20230417-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  filter: brightness(50%);
+
+}
+
+.submitBut {
+  display: block;
+  margin: 0 auto;
+  color: white;
+}
+
+
+a {
+  text-decoration: none;
+  color: White;
+  /* Replace "red" with the desired color */
+}
+
+
+.form-control {
+  background-color: grey;
+
+}
+
+.form-floating>* {
+  color: white;
+}
+
+
+input:focus {
+  color: white;
+}
+
+input {
+  color: white;
+}
+
+input:-webkit-autofill {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.form-control:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 0 50px black inset !important;
+}
+
+.form-control:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px black inset !important;
+}
+
+.form-floating {
+  display: flex;
+
+  color: white;
+  flex-direction: row;
+
+
+}
+
+#floatingInput {
+  background-color: rgba(0, 0, 0, 0.2);
+
+}

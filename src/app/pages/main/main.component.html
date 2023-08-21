@@ -1,0 +1,36 @@
+<div class="background">
+
+  <div class="header">
+    <div class="header-content">
+      <h1>Unlimited movies, TV shows, and more!</h1>
+      <p class="Subtitle">Watch anywhere. Cancel anytime.</p>
+      <p class="Subtitle">Ready to watch? Enter your email to create or restart your membership.</p>
+
+
+      <form [formGroup]="form" (ngSubmit)="register()" class="email-line">
+        <div class="row g-2">
+          <div class=col-lg->
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                formControlName="email"
+                [ngClass]="{'is-invalid': email.errors?.['required'] && !email.valid && (email.dirty || email.touched)}">
+              <label for="floatingInput">Email address</label>
+              <button class="btn"> GET STARTED > </button>
+            </div>
+          </div>
+        </div>
+        <div class="row g-2">
+          <div *ngIf="!email.valid && (email.dirty || email.touched)">
+
+            <div style="text-indent: 10px; color: red; font-size: small;" *ngIf="email.errors?.['emilexist']"> Please
+              try
+              to use another email!</div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="main-content">
+    <app-display-box *ngFor="let each of slogans; let i = index;" [slogan]="each" [index]="i"> </app-display-box>
+  </div>
+</div>

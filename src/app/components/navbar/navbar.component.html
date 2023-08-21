@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg  navbar-light" style="background-color: transparent;">
+  <div class="container px-5">
+    <a class="navbar-brand" href="#!" routerLink="/main" routerLinkActive="active">
+      <img class="img-fluid" src="assets/Netflix_2015_logo.svg" style="height: 50px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <li class='display-username' *ngIf="loginStatus">Hello, {{username}}</li>
+        <li class="nav-item" *ngIf="loginStatus"><a class="nav-link" href="#!" routerLink="/register/register-step3"
+            routerLinkActive="active"><button type="button" class="btn btn-danger">Select Plan</button></a></li>
+        <li class="nav-item" *ngIf="loginStatus"><a class="nav-link" href="#!" routerLink="/movie"
+            routerLinkActive="active"><button type="button" class="btn btn-danger">Discover Movie List</button></a></li>
+        <li class="nav-item" *ngIf="!loginStatus"><a class="nav-link" href="#!" routerLink="/register/login"
+            routerLinkActive="active"><button type="button" class="btn btn-danger">Sign In</button></a></li>
+        <li class="nav-item" *ngIf="loginStatus"><a class="nav-link" href="#!"><button type="button"
+              class="btn btn-danger" (click)="logout()">Sign out</button></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

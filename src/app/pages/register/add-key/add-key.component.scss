@@ -1,0 +1,47 @@
+.container {
+  width: 450px;
+  min-width: 380px;
+  padding-top: 90px;
+}
+
+.form-control {
+  background-color: grey;
+
+}
+
+.form-floating>* {
+  color: black;
+}
+
+
+input:focus {
+  color: black;
+}
+
+input {
+  color: black;
+}
+
+
+
+
+.form-floating {
+  display: flex;
+
+  color: black;
+  flex-direction: row;
+
+
+}
+
+#floatingInput {
+  background-color: white;
+
+}
+
+button {
+  font-size: larger;
+  width: 100%;
+  height: 60px;
+
+}
